@@ -19,39 +19,49 @@ body ul{
 .nav {
     float: left;
     width: 33%;
-    height: 50px;
+    height: 100%;
 }
 
 .logo {
     width: 33%;
     float: left;
-    height: 100px;
-    line-height: 100px;
+    height: 100%;
     color: #FFF;
     font-size: 30px;
     text-align: center;
     font-style: oblique;
+    position: relative;
 }
-
+.nav ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
 .nav ul li {
+    position: relative;
     float: left;
     list-style-type: none;
     margin: 0 30px;
-    height: 100px;
-    line-height: 100px;
+    height: 100%;
+    line-height: 1;
     color: #FFF;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
 }
-
+.nav ul li .verticle_center{position: relative;}
 header {
     border-bottom: 1px solid rgba(250,250,250,.5);
     height: 100px;
     margin: 0px 30px 0px 30px;
+    transition: all .3s;
+    width: auto;
 }
+
 section {
-    width: 100vw;
+    width: 100%;/*vw*/
     height: 100vh;
 }
 section h1{
@@ -118,15 +128,15 @@ section h1{
     width: 100%;
     height: auto;
 }
-
-.content_area_p2 {
+.float_right{float: right;}
+.float_left{float: left;}
+.content_area_{
     padding: 80px;
     margin: 150px 0 60px;
     width: 40%;
-    float: right;
 }
 
-.content_area_p2 h6 {
+.content_area_ h6 {
     font-size: 12px;
     color: #888888;
     font-weight: 900;
@@ -134,32 +144,37 @@ section h1{
     margin: 0px;
 }
 
-.content_area_p2 h2 {
+.content_area_ h2 {
     font-size: 40px;
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 3px;
     margin-bottom: 60px;
 }
 
-.content_area_p2 h3 {
+.content_area_ h3 {
     font-size: 23px;
     color: #444444;
     font-weight: 400;
     line-height: 40px;
 }
 
-.content_area_p2 h5 {
+.content_area_ h5 {
     color: 	#0066FF;
     font-size: 18px;
     cursor: pointer;
+    display: inline-block;
 }
-
+.float_left h5{color: #0ff;}
 .fa-angle-right {
     margin-left: 10px;
+-webkit-transition: margin 1s 0s;
+-moz-transition: margin 1s 0s;
+-ms-transition: margin 1s 0s;
+transition: margin 1s 0s;
 }
 
-.fa-angle-right:hover > .content_area_p2 {
+.content_area_ h5:hover .fa-angle-right{
     margin-left: 20px;
 }
 .backgroundImage3 {
@@ -171,44 +186,16 @@ section h1{
 
 
 
-.content_area_p3 {
-    padding: 80px;
-    margin: 150px 0 60px;
-    width: 40%;
-    float: left;
-}
-
-.content_area_p3 h6 {
-    font-size: 12px;
-    color: 	#AAAAAA;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin: 0px;
-}
-
-.content_area_p3 h2 {
-    font-size: 40px;
-    color: #FFFFFF;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 60px;
-}
-
-.content_area_p3 h3 {
-    font-size: 23px;
-    color: #FFFFFF;
-    font-weight: 400;
-    line-height: 40px;
-}
-
-.content_area_p3 h5 {
-    color: #CCFF99;
-    font-size: 18px;
-    cursor: pointer;
-}
-
 .header_fix {
     position: fixed;
     background-color: black;
     width: 100%;
+    height: 80px;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
 }
+.verticle_center{display: table; position: absolute; width: 100%; height: 100%; left: 0px; top: 0%;}
+.verticle_center p{display: table-cell; vertical-align: middle;}
+.header_fix .nav ul li{color: #f00;}
+.header_fix .logo{color: #f00;}
